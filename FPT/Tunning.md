@@ -1,3 +1,4 @@
+
 ## 1.Tuning rule 941310
 
 ![](https://i.imgur.com/ZqBguIh.png)
@@ -21,9 +22,8 @@ transid=635b2ef7a68bd&custData=<custData><mobile>0963695966</mobile><status>N</s
 
 - False positve xảy ra với khi data theo URL là dạng **XML** và có chứa ký tự **"Ế"** khi decode sang UTF-8 sẽ trở thành **"áº¾"** đồng thời trước nó sẽ có ký tự đặc biệt **"<"** do dạng dữ liệu là XML  dẫn đến match với: `<[^\xbe]*\xbe` gây cảnh báo sai.
 
-![](https://i.imgur.com/L6hSPOC.png)
+![](https://i.imgur.com/FHKuWUO.png)
  
-![](https://i.imgur.com/OxpgPNR.png)
 ### 2.2. Cấu hình chỉnh sửa rule
 Chỉnh sửa tại file : 	
 
@@ -47,7 +47,7 @@ SecRule REQUEST_COOKIES|!REQUEST_COOKIES:/__utm/|REQUEST_COOKIES_NAMES|ARGS_NAME
 ```
 Kiểm tra sau khi thay đổi rule.
 
-![](https://i.imgur.com/rR5QKZH.png)
+![](https://i.imgur.com/RfuPRlQ.png)
 
 
 #### Preferences
